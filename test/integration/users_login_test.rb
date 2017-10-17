@@ -38,10 +38,10 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
    assert_select "a[href=?]", user_path(@user), count: 0
  end
 
- test "login with remembering" do
-    log_in_as(@user, remember_me: '1')
-    assert_equal nil, assigns(:user).password
-  end
+ # test "login with remembering" do
+ #    log_in_as(@user, remember_me: '1')
+ #    assert_equal nil, assigns(:user).password
+ #  end
 
   test "login without remembering" do
   # クッキーを保存してログイン
